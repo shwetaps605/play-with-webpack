@@ -50,6 +50,10 @@ module.exports = {
                         plugins: ['@babel/plugin-proposal-class-properties']
                     }
                 }
+            }, 
+            {
+                test:/\.hbs$/,
+                use: ["handlebars-loader"]
             }
         ]
     },
@@ -64,6 +68,10 @@ module.exports = {
                 path.join(process.cwd(), "build/**/*")
             ]
         }),
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin({
+            title: "Webpack Test",
+            template: "src/index.hbs",
+            description:"Some description"
+        })
     ]
 }
