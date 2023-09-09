@@ -11,5 +11,7 @@ import Header from "./components/header/header";
 const header = new Header();
 header.render();
 
+//header.render();
+
 const helloWorldButton = new HelloWorldButton();
 helloWorldButton.render();

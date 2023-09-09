@@ -1,12 +1,11 @@
 import "./header.scss"
 
-class Header {
-    render() {
+export class Header {
+    render(name) {
         const heading = document.createElement('h1')
-        heading.innerText = "Webpack is awwwsome!"
+        heading.innerText = "Webpack is awwwsome! This is page" + " " + name
         const body = document.querySelector("body")
         body.appendChild(heading)
     }
 }
 
-export default Header
